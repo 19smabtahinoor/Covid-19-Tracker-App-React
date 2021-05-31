@@ -55,12 +55,14 @@ function Covid19() {
                         </TableHead>
                         <TableBody>
                             {data.filter((val) => {
-                                if (inputValue === "") {
+
+                               if (inputValue === "") {
                                     return val
                                 } 
                                 else if (val.country.includes(inputValue)){
                                     return val
                                 }
+                                return false;
 
                             }).map((item, index) => {
                                 return (
